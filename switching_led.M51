@@ -1,0 +1,81 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        09/21/2018  19:51:54  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE sw.obj TO switching_led RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  sw.obj (SW)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  switching_led (SW)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     000DH     UNIT         ?PR?MAIN?SW
+            CODE    080DH     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   switching_led (SW)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?SW
+
+
+
+SYMBOL TABLE OF MODULE:  switching_led (SW)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        SW
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  C:0800H         PUBLIC        main
+  B:0090H.0       PUBLIC        led_blink
+  B:0090H.1       PUBLIC        switch_led
+  -------         PROC          MAIN
+  C:0800H         LINE#         11
+  C:0800H         LINE#         12
+  C:0800H         LINE#         13
+  C:0802H         LINE#         15
+  C:0802H         LINE#         16
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/21/2018  19:51:54  PAGE 2
+
+
+  C:0802H         LINE#         18
+  C:0805H         LINE#         19
+  C:0805H         LINE#         20
+  C:0807H         LINE#         21
+  C:0809H         LINE#         24
+  C:0809H         LINE#         25
+  C:080BH         LINE#         26
+  C:080BH         LINE#         27
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        SW
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 000DH BYTE ( 0%) *
+******************************************************************************
+
+Program Size: data=9.0 xdata=0 code=28
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
